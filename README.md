@@ -152,6 +152,12 @@ Skype indicator to work properly:
 	hdajackretask // select show unconnected pins and choose microphone from pin 18
 	alsamixer //adjust pcm and capture
 
+##Internet Speed meter
+	*sudo apt-get install dconf-editor
+	*sudo apt-add-repository ppa:fixnix/netspeed
+	*sudo apt-get update
+	*sudo apt-get install indicator-netspeed-unity
+
 
 ##To loopback microphone sound to speaker
 	pactl unload-module module-loopback

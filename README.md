@@ -153,10 +153,11 @@ Skype indicator to work properly:
 	alsamixer //adjust pcm and capture
 
 ##Internet Speed meter
-	*sudo apt-get install dconf-editor
-	*sudo apt-add-repository ppa:fixnix/netspeed
-	*sudo apt-get update
-	*sudo apt-get install indicator-netspeed-unity
+	sudo apt-get install dconf-editor
+	
+	sudo apt-add-repository ppa:fixnix/netspeed
+	sudo apt-get update
+	sudo apt-get install indicator-netspeed-unity
 
 
 ##To loopback microphone sound to speaker

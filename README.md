@@ -154,11 +154,13 @@ Skype indicator to work properly:
 
 ##Internet Speed meter
 	sudo apt-get install dconf-editor
-	
+
 	sudo apt-add-repository ppa:fixnix/netspeed
 	sudo apt-get update
 	sudo apt-get install indicator-netspeed-unity
 
+##Add PPA on Elementory OS 
+	sudo apt-get install software-properties-common
 
 ##To loopback microphone sound to speaker
 	pactl unload-module module-loopback

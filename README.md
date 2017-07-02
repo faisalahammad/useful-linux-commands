@@ -25,6 +25,15 @@ Here you will find collection of most and frequently used commands on linux. Tho
 	sudo apt-get upgrade
 	sudo apt-get dist-upgrade
 
+### Internet Speed Meter
+```
+sudo apt-get install dconf-editor
+
+sudo apt-add-repository ppa:fixnix/netspeed
+sudo apt-get update
+sudo apt-get install indicator-netspeed-unity
+```
+
 ## To install unijoy support:
 	sudo apt-get install ibus-m17n m17n-db m17n-contrib ibus-gtk
 	ibus-daemon -xdr

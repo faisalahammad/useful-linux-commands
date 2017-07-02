@@ -2,10 +2,10 @@
 
 Here you will find collection of most and frequently used commands on linux. Those will be help full for them who are new with linux operating system.  I belive this snippet can save huge time for those who are in need of creating development environment in linux for web development.  
 
-##Broadband and wifi setup
+## Broadband and wifi setup
 	sudo pppoeconf 
 
-###To enable wifi sharing:
+### To enable wifi sharing:
 	Create a WiFi connection first
 	* Connection name will be "wifi-hotspot" (or anything)
 	* Set one SSID, in my case it is "webitbuzz"
@@ -25,47 +25,47 @@ Here you will find collection of most and frequently used commands on linux. Tho
 	sudo apt-get upgrade
 	sudo apt-get dist-upgrade
 
-##To install unijoy support:
+## To install unijoy support:
 	sudo apt-get install ibus-m17n m17n-db m17n-contrib ibus-gtk
 	ibus-daemon -xdr
 
-##To isntall sass:
+## To isntall sass:
 	sudo apt-get install ruby-full
 	sudo apt-get install gem
 	sudo gem install sass
 
-##To install git
+## To install git
 	sudo apt-get install git
 
-##To install gulp
+## To install gulp
 	sudo apt-get install npm
 	sudo npm install --global gulp
 
-##To install LAMP and phpmyadmin
+## To install LAMP and phpmyadmin
 	sudo apt-get install tasksel
 	sudo tasksel
 	sudo apt-get install phpmyadmin
 	sudo apt-get install php-mbstring php7.0-mbstring php-gettext
 
-##To enable rewrite mode on and Restart apache2
+## To enable rewrite mode on and Restart apache2
 	sudo a2enmod rewrite
 	sudo /etc/init.d/apache2 restart
 	or
 	sudo service apache2 restart
 
-###Need to edit bellow file
+### Need to edit bellow file
 	sudo gedit /etc/apache2/sites-available/000-default.conf
 
 	DocumentRoot /var/www/html
 	<Directory "/var/www/html">
 		AllowOverride All
 	</Directory>
-###To set private domain name instead of localhost
+### To set private domain name instead of localhost
 	sudo gedit /etc/hosts
 	127.0.0.1 	localhost
 	127.0.0.1 	newname.tld // Copy above line and edit it as you want
 
-##www and WordPress directory and files permision setup
+## www and WordPress directory and files permision setup
 
 	sudo chown www-data:www-data /var/www -R // to change user and group ownership
 	sudo chmod 755 /var/www -R // To change user permission where r=7 w=7 e=5
@@ -106,7 +106,7 @@ Extra step 4: To upload plugins or add media without facing issues edit and repl
 	export APACHE_RUN_USER=username
 	export APACHE_RUN_GROUP=username
 
-##To install skype
+## To install skype
 
 To enable it, launch Software & Updates from the Unity Dash, go to Other Software tab. Check the first two boxes which say “Canonical Partners” and “Canonical Partners(Source Code)”.
 
@@ -117,52 +117,52 @@ Skype indicator to work properly:
 
 	sudo apt-get install sni-qt:i386
 
-##To install google chrome
+## To install google chrome
 	sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	sudo dpkg -i google-chrome-stable_current_amd64.deb
 	sudo apt-get -f install
 	sudo rm google-chrome-stable_current_amd64.deb
 
-##To install sublime text
+## To install sublime text
 	sudo add-apt-repository ppa:webupd8team/sublime-text-3
 	sudo apt-get update
 	sudo apt-get install sublime-text-installer
 
-##To install filezilla
+## To install filezilla
 	sudo apt-get install filezilla
 
-##To install dropbox
+## To install dropbox
 	cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 	~/.dropbox-dist/dropboxd
 
-##Others
+## Others
 	sudo apt-get install synaptic vlc 
 	sudo apt-get install gimp gimp-data gimp-plugin-registry gimp-data-extras 
 	sudo apt-get install bleachbit flashplugin-installer 
 	sudo apt-get install unrar zip unzip p7zip-full p7zip-rar rar mpack
 	sudo apt-get install openjdk-7-jre oracle-java8-installer
 
-##To clean up
+## To clean up
 	sudo apt-get -f install && sudo apt-get autoremove &&
 	sudo apt-get -y autoclean && sudo apt-get -y clean
 
-##To Solve microphone input issue
+## To Solve microphone input issue
 	sudo gedit /etc/modprobe.d/alsa-base.conf
 	"options snd-hda-intel model=auto" // Put it bottom of the alsa-base.conf file
 	hdajackretask // select show unconnected pins and choose microphone from pin 18
 	alsamixer //adjust pcm and capture
 
-##Internet Speed meter
+## Internet Speed meter
 	sudo apt-get install dconf-editor
 
 	sudo apt-add-repository ppa:fixnix/netspeed
 	sudo apt-get update
 	sudo apt-get install indicator-netspeed-unity
 
-##Add PPA on Elementory OS 
+## Add PPA on ElementaryOS 0.4 Loki
 	sudo apt-get install software-properties-common
 
-##To loopback microphone sound to speaker
+## To loopback microphone sound to speaker
 	pactl unload-module module-loopback
 	pactl load-module module-loopback
 
@@ -187,15 +187,15 @@ Skype indicator to work properly:
 	ssh cpaneluser@domain.tld // it will ask for passpress for onetime in each computer login session
 
 
-##Linux obuntu installation in google chromebook
+## Linux obuntu installation in google chromebook
 
-###To see detail list of availabe version of obuntu
+### To see detail list of availabe version of obuntu
 	sh -e ~/Downloads/crouton -t list
 
-###To see detail list of availabe released version of obuntu
+### To see detail list of availabe released version of obuntu
 	sh -e ~/Downloads/crouton -r list
 
-###To start installation
+### To start installation
 	sudo sh -e ~/Downloads/crouton -t cinnamon -r raring
 
 

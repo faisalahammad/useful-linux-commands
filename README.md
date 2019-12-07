@@ -207,5 +207,12 @@ Skype indicator to work properly:
 ### To start installation
 	sudo sh -e ~/Downloads/crouton -t cinnamon -r raring
 
+### Delete matching files in all subdirectories
+Remove all `*.swp` files underneath the current directory, use the find command in one of the following forms:
+
+```
+find . -name \*.swp -type f -delete
+```
+
 
 ## Good Luck!
